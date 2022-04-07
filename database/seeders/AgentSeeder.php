@@ -4,15 +4,18 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+use App\Models\Agent;
+
+class AgentSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
-        \App\Models\Agent::factory(50)->create();
+        Agent::factory(50)
+            ->create();
     }
 }
